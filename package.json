@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dotenv": "^8.5.1",
+    "prompt-sync": "^4.2.0",
+    "taiko": "^1.2.5"
+  }
+}
