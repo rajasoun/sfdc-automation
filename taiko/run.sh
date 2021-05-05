@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-npx taiko sfdc.js --observe
+npm install
+npx taiko sfdc_login.js --observe
