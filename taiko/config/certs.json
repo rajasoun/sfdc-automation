@@ -1,0 +1,14 @@
+{
+  "certDetails": {
+    "country": "IN",
+    "state": "Karnataka",
+    "locality": "Bangalore",
+    "organization": "Cisco",
+    "organizationalunit": "CX",
+    "email": "lcce-ap-security@cisco.com",
+    "keysize": 2048
+  },
+  "orgDetails": {
+    "orgValue": "HubOrg"
+  }
+}

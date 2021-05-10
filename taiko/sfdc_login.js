@@ -3,8 +3,6 @@ const {
   goto,
   write,
   click,
-  link,
-  openTab,
   getCookies,
   closeBrowser,
 } = require("taiko");
@@ -20,9 +18,11 @@ require("dotenv").config();
     await write(process.env.PASSWORD, into(textBox({ id: "password" })));
     await click("Log In");
 
-    const otp = prompt("OTP: ");
-    await write(otp, into(textBox({ id: "smc" })));
-    await click("Verify");
+    if (process.env.OTP === "Yes") {
+      const otp = prompt("OTP: ");
+      await write(otp, into(textBox({ id: "smc" })));
+      await click("Verify");
+    }
 
     console.log(await getCookies());
   } catch (error) {

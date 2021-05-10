@@ -3,5 +3,10 @@
     "dotenv": "^8.5.1",
     "prompt-sync": "^4.2.0",
     "taiko": "^1.2.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "commitlint": "^12.1.1"
   }
 }
