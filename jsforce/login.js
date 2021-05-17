@@ -6,6 +6,8 @@ var dotenv = require("dotenv").config();
 var loginUrl = process.env.LOGIN_URL;
 var username = process.env.USERNAME;
 var password = process.env.PASSWORD;
+var token = process.env.SECURITY_TOKEN;
+
 var conn = new jsforce.Connection({
   // you can change loginUrl to connect to sandbox or prerelease env.
   loginUrl: loginUrl,
@@ -18,8 +20,7 @@ async function closeGracefully(signal) {
 }
 process.on("SIGINT", closeGracefully);
 
-
-conn.login(username, password, function (err, userInfo) {
+conn.login(username, password + token, function (err, userInfo) {
   if (err) {
     return console.error(err);
   }

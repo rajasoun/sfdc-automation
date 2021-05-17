@@ -43,9 +43,11 @@ const refresh_token_api =
   "Perform requests on your behalf at any time (refresh_token, offline_access)";
 const web_api = "Provide access to your data via the Web (web)";
 const user_policy = "Admin approved users are pre-authorized";
-const assign_connected_app_locator = "//a[normalize-space(text()) = 'Assigned Connected Apps']"
-const connected_app_assignment_locator_drop_down = "page:console:j_id81:entity_access_detail:pageblock:j_id160:pages:duelingListBox:backingList_a";
-const connected_app_add_locator = "(//*[@alt='Add'])[1]"
+const assign_connected_app_locator =
+  "//a[normalize-space(text()) = 'Assigned Connected Apps']";
+const connected_app_assignment_locator_drop_down =
+  "page:console:j_id81:entity_access_detail:pageblock:j_id160:pages:duelingListBox:backingList_a";
+const connected_app_add_locator = "(//*[@alt='Add'])[1]";
 
 const callback_url = "http://localhost:1717/OauthRedirect";
 
@@ -126,7 +128,9 @@ const callback_url = "http://localhost:1717/OauthRedirect";
     await click("Dashboard Admin");
     await click($(assign_connected_app_locator));
     await click("Edit");
-    await dropDown({name: connected_app_assignment_locator_drop_down}).select(process.env.CONNECTED_APP_NAME);
+    await dropDown({ name: connected_app_assignment_locator_drop_down }).select(
+      process.env.CONNECTED_APP_NAME
+    );
     await click($(connected_app_add_locator));
     await click(button({ value: "Save" }));
   } catch (error) {
